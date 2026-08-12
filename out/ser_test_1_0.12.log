@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/steven/.claude/worktrees/silica-eo-converter/silica_eo_converter/serializer.py", line 23, in <module>
+    N = int(sys.argv[1])
+ValueError: invalid literal for int() with base 10: '1 0.12'
+
+Elapsed run time = 0.0008 s

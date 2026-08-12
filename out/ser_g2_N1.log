@@ -1,0 +1,43 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.000283003 s
+Working in 2D dimensions.
+Computational cell is 29 x 22.2 x 0 with resolution 15
+     block, center = (0,-7.5955,0)
+          size (1e+20,0.991,1e+20)
+          axes (1,0,0), (0,1,0), (0,0,1)
+          dielectric constant epsilon diagonal = (2.08521,2.08521,2.08521)
+     cylinder, center = (0,-0.4045,0)
+          radius 6.4955, height 1e+20, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (2.08521,2.08521,2.08521)
+     cylinder, center = (0,-0.4045,0)
+          radius 5.5045, height 1e+20, axis (0, 0, 1)
+          dielectric constant epsilon diagonal = (1,1,1)
+time for set_epsilon = 0.439246 s
+-----------
+MPB solved for frequency_1(0.931628,0,0) = 0.688679 after 13 iters
+MPB solved for frequency_1(0.867403,0,0) = 0.645154 after 9 iters
+MPB solved for frequency_1(0.867413,0,0) = 0.645161 after 3 iters
+Meep progress: 105.06666666666666/880.0 = 11.9% done in 4.0s, 29.5s to go
+on time step 3152 (time=105.067), 0.00126927 s/step
+Meep progress: 204.46666666666667/880.0 = 23.2% done in 8.0s, 26.4s to go
+on time step 6134 (time=204.467), 0.00134167 s/step
+Meep progress: 308.76666666666665/880.0 = 35.1% done in 12.0s, 22.2s to go
+on time step 9263 (time=308.767), 0.00127847 s/step
+Meep progress: 412.9/880.0 = 46.9% done in 16.0s, 18.1s to go
+on time step 12392 (time=413.067), 0.00127838 s/step
+Meep progress: 512.0333333333333/880.0 = 58.2% done in 20.0s, 14.4s to go
+on time step 15365 (time=512.167), 0.00134574 s/step
+Meep progress: 607.1333333333333/880.0 = 69.0% done in 24.0s, 10.8s to go
+on time step 18217 (time=607.233), 0.00140256 s/step
+Meep progress: 687.4333333333333/880.0 = 78.1% done in 28.0s, 7.8s to go
+on time step 20625 (time=687.5), 0.00166164 s/step
+Meep progress: 752.6/880.0 = 85.5% done in 32.0s, 5.4s to go
+on time step 22582 (time=752.733), 0.00204415 s/step
+Meep progress: 842.6666666666666/880.0 = 95.8% done in 36.0s, 1.6s to go
+on time step 25284 (time=842.8), 0.00148072 s/step
+run 0 finished at t = 880.0 (26400 timesteps)
+N=1 gap=0.2: E_out/E_in = 0.9957  round-trips(fs) = ['188']
+
+Elapsed run time = 38.3953 s
