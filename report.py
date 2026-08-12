@@ -155,6 +155,41 @@ couplers only) &rarr; balanced-detection ports. Coupling is the only addition me
 <tr><td>min bend radius</td><td>12 &micro;m (Q&#8322;&#8321;bend&asymp;10&#8310;)</td><td>ring Q sweep</td></tr>
 </table>
 
+<h2>8 &mdash; Serializer: N values &rarr; sequential pulse train, blank tail</h2>
+<p><b>Zero-loss variant (all-pass ring chain):</b> N rings on one bus, each unitary on the
+bus mode — scaling adds no fundamental loss (single ring measured 99.6%). Produces an
+uneven, front-loaded echo cluster; loss trend measured N=1&rarr;4: 0.98/0.93/0.89/0.82,
+linear ~4-5%/ring with NO superlinear blowup, and mostly window/grid artifact.
+But at large N the echoes smear — no crisp slots. Passive impossibility: a static network
+emitting N clean pulses into one port losslessly would be an all-pass FIR = a pure delay.</p>
+{img('fig/serializer_trains.png')}<figcaption>All-pass chain, N=1&rarr;4 (FDTD): uneven cluster
+then decay; E_out/E_in annotated.</figcaption>
+<p><b>Crisp-slot variant (counter-directional tap ladder, chosen for N=50):</b> bus A flows
+right, N arms tap with s<sub>k</sub>=1/(N+1-k), U-turn (&rho;=6 &micro;m), merge onto
+leftward bus B with the mirrored ladder — slot k delayed 2x<sub>k</sub>n<sub>g</sub>/c
+(uneven pitch = uneven slots), T<sub>k</sub>=1/N&sup2; exactly flat, and the tail is
+<b>structurally blank</b> (FIR — nothing recirculates). Cost: total output = 1/N (fan-out
+division, the static-passive optimum), per-slot 1/N&sup2;.</p>
+<p><b>Killing the slot decay:</b> the first builds collapsed 100&times; across 6 slots.
+Root causes found and fixed by in-situ FDTD calibration: (i) &rho;=3.5 U-bends radiated
+~10%/half-turn &rarr; &rho;=6; (ii) the merge arc arrives tangent to bus B imposing a
+coupling floor (0.79 rad @ gap 0.12 — minimum ratio 0.50!) &rarr; merge gap opened to
+0.40; (iii) per-coupler lengths from the measured &kappa;(L) curves (tap side:
+&kappa;=0.434+0.137L, matching the supermode rate), then two measure-and-trim passes.</p>
+{img('fig/ladder6_flat.png')}<figcaption>N=6 ladder after calibration + 2 trims (FDTD): six
+slots flat to &plusmn;1.5 dB with no trend, blank tail at 3.5&times;10&#8315;&#8308;, total
+90% of the 1/N optimum.</figcaption>
+{img('fig/ladder50_waveform.png')}<figcaption>N=50 composed FIR model: 50 slots
+(0.14&ndash;10.5 ps) then exactly blank.</figcaption>
+<p><b>The N=50 pattern:</b> per tap, &kappa;=asin&radic;ratio &rarr; smallest gap tier whose
+arc floor &le; 0.85&kappa; (floors exponential in gap, anchored by FDTD at 0.12/0.30/0.40)
+&rarr; L=(&kappa;-floor)/rate. Gaps staircase 0.5/0.7 &micro;m down to 0.12/0.12; lengths
+sawtooth up to 8.2 &micro;m; full 50-row fab table in <code>out/pattern50.json</code>.</p>
+{img('fig/pattern50.png')}<figcaption>Ratio &rarr; gap tier &rarr; length for all 50 taps
+(tap blue, merge red; merge always one tier wider — its floor is ~1.8&times; higher).</figcaption>
+{img('fig/layout50.png')}<figcaption>Full N=50 circuit to scale: master MRR &rarr; zero-GVD
+bus &rarr; 1.33 mm ladder (27% of the 5 mm chip), weight electrode on every arm.</figcaption>
+
 <h2>Methods &amp; caveats</h2>
 <ul>
 <li>All FDTD: MEEP 1.29, 2D (slab), Ez/TE, PML 1.5 &micro;m, res 16&ndash;30 px/&micro;m as noted.</li>
