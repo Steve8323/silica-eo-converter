@@ -1,0 +1,95 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.000696898 s
+Working in 2D dimensions.
+Computational cell is 158.133 x 21.2 x 0 with resolution 15
+subpixel-averaging is 60.2133% done, 2.67079 s remaining
+subpixel-averaging is 60.2133% done, 2.6741 s remaining
+subpixel-averaging is 6.03087% done, 62.6437 s remaining
+subpixel-averaging is 12.0619% done, 29.7547 s remaining
+subpixel-averaging is 18.2516% done, 18.359 s remaining
+subpixel-averaging is 24.2827% done, 12.739 s remaining
+subpixel-averaging is 30.4724% done, 9.28648 s remaining
+subpixel-averaging is 36.5034% done, 7.04189 s remaining
+subpixel-averaging is 42.6932% done, 5.39787 s remaining
+subpixel-averaging is 48.7242% done, 4.29376 s remaining
+subpixel-averaging is 54.7552% done, 3.30828 s remaining
+subpixel-averaging is 60.945% done, 2.58726 s remaining
+subpixel-averaging is 66.976% done, 1.97865 s remaining
+subpixel-averaging is 73.007% done, 1.48426 s remaining
+subpixel-averaging is 79.1968% done, 1.07133 s remaining
+subpixel-averaging is 85.3865% done, 0.699965 s remaining
+subpixel-averaging is 91.4175% done, 0.378003 s remaining
+subpixel-averaging is 97.1311% done, 0.118964 s remaining
+subpixel-averaging is 58.4929% done, 2.88618 s remaining
+subpixel-averaging is 60.2133% done, 2.71653 s remaining
+subpixel-averaging is 6.34829% done, 60.1467 s remaining
+subpixel-averaging is 12.538% done, 28.5785 s remaining
+subpixel-averaging is 18.8865% done, 17.3559 s remaining
+subpixel-averaging is 25.0762% done, 12.1163 s remaining
+subpixel-averaging is 31.266% done, 8.85624 s remaining
+subpixel-averaging is 37.297% done, 6.76455 s remaining
+subpixel-averaging is 43.4867% done, 5.32517 s remaining
+subpixel-averaging is 49.6765% done, 4.15825 s remaining
+subpixel-averaging is 55.8662% done, 3.23073 s remaining
+subpixel-averaging is 62.0559% done, 2.47939 s remaining
+subpixel-averaging is 68.087% done, 1.89717 s remaining
+subpixel-averaging is 74.118% done, 1.39738 s remaining
+subpixel-averaging is 80.149% done, 0.991496 s remaining
+subpixel-averaging is 86.1801% done, 0.645124 s remaining
+subpixel-averaging is 92.2111% done, 0.341296 s remaining
+subpixel-averaging is 98.2421% done, 0.0721087 s remaining
+subpixel-averaging is 58.4929% done, 2.88906 s remaining
+subpixel-averaging is 60.2133% done, 2.64442 s remaining
+subpixel-averaging is 6.34829% done, 59.2685 s remaining
+subpixel-averaging is 12.538% done, 28.5392 s remaining
+subpixel-averaging is 18.8865% done, 17.3257 s remaining
+subpixel-averaging is 25.0762% done, 12.1447 s remaining
+subpixel-averaging is 31.266% done, 8.82308 s remaining
+subpixel-averaging is 37.297% done, 6.72723 s remaining
+subpixel-averaging is 43.4867% done, 5.20902 s remaining
+subpixel-averaging is 49.5178% done, 4.09544 s remaining
+subpixel-averaging is 55.7075% done, 3.26182 s remaining
+subpixel-averaging is 61.7385% done, 2.50742 s remaining
+subpixel-averaging is 67.7696% done, 1.91679 s remaining
+subpixel-averaging is 73.8006% done, 1.42932 s remaining
+subpixel-averaging is 79.8316% done, 1.01162 s remaining
+subpixel-averaging is 85.8626% done, 0.661885 s remaining
+subpixel-averaging is 91.8937% done, 0.358155 s remaining
+subpixel-averaging is 97.9247% done, 0.0861724 s remaining
+time for set_epsilon = 245.515 s
+-----------
+MPB solved for frequency_1(0.931628,0,0) = 0.688333 after 14 iters
+MPB solved for frequency_1(0.867906,0,0) = 0.645155 after 9 iters
+MPB solved for frequency_1(0.867916,0,0) = 0.645161 after 2 iters
+Meep progress: 75.73333333333333/951.9197557393127 = 8.0% done in 4.0s, 46.3s to go
+on time step 2272 (time=75.7333), 0.00176139 s/step
+Meep progress: 152.1/951.9197557393127 = 16.0% done in 8.0s, 42.1s to go
+on time step 4563 (time=152.1), 0.00174641 s/step
+Meep progress: 230.36666666666667/951.9197557393127 = 24.2% done in 12.0s, 37.6s to go
+on time step 6911 (time=230.367), 0.00170369 s/step
+Meep progress: 295.73333333333335/951.9197557393127 = 31.1% done in 16.0s, 35.5s to go
+on time step 8872 (time=295.733), 0.00203994 s/step
+Meep progress: 362.7/951.9197557393127 = 38.1% done in 20.0s, 32.5s to go
+on time step 10881 (time=362.7), 0.00199118 s/step
+Meep progress: 438.96666666666664/951.9197557393127 = 46.1% done in 24.0s, 28.1s to go
+on time step 13169 (time=438.967), 0.00174868 s/step
+Meep progress: 507.46666666666664/951.9197557393127 = 53.3% done in 28.0s, 24.5s to go
+on time step 15224 (time=507.467), 0.00194693 s/step
+Meep progress: 571.7333333333333/951.9197557393127 = 60.1% done in 32.0s, 21.3s to go
+on time step 17152 (time=571.733), 0.00207515 s/step
+Meep progress: 639.0333333333333/951.9197557393127 = 67.1% done in 36.0s, 17.6s to go
+on time step 19171 (time=639.033), 0.00198147 s/step
+Meep progress: 705.4666666666667/951.9197557393127 = 74.1% done in 40.0s, 14.0s to go
+on time step 21165 (time=705.5), 0.0020069 s/step
+Meep progress: 769.0/951.9197557393127 = 80.8% done in 44.0s, 10.5s to go
+on time step 23071 (time=769.033), 0.002099 s/step
+Meep progress: 836.2333333333333/951.9197557393127 = 87.8% done in 48.0s, 6.6s to go
+on time step 25089 (time=836.3), 0.001983 s/step
+Meep progress: 906.2666666666667/951.9197557393127 = 95.2% done in 52.0s, 2.6s to go
+on time step 27189 (time=906.3), 0.00190491 s/step
+run 0 finished at t = 951.9333333333333 (28558 timesteps)
+ladder N=6: E_out/E_in=0.1596 (ideal 1/N=0.167); slots(fs)=['304', '464', '643', '853', '1102', '1401']
+
+Elapsed run time = 300.8031 s
