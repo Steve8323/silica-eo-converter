@@ -17,9 +17,9 @@ from matplotlib.patches import Circle, Rectangle
 
 N = 50
 W = 0.991
-GAP = 0.12
+GAP = 0.12          # tap side; merge side uses 0.40 (arc-coupling floor)
 LPI = 11.31
-RHO = 3.5
+RHO = 6.0
 
 def clen(r):
     return LPI * 2 / np.pi * np.arcsin(np.sqrt(min(r, 1.0)))

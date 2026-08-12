@@ -1,0 +1,65 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.000510931 s
+Working in 2D dimensions.
+Computational cell is 58 x 26.2 x 0 with resolution 15
+subpixel-averaging is 14.749% done, 23.7087 s remaining
+subpixel-averaging is 29.4984% done, 9.56094 s remaining
+subpixel-averaging is 43.1942% done, 5.26834 s remaining
+subpixel-averaging is 58.2948% done, 2.89936 s remaining
+subpixel-averaging is 73.0441% done, 1.49873 s remaining
+subpixel-averaging is 87.7935% done, 0.570379 s remaining
+subpixel-averaging is 13.6955% done, 25.5453 s remaining
+subpixel-averaging is 28.0937% done, 10.507 s remaining
+subpixel-averaging is 41.7895% done, 5.59865 s remaining
+subpixel-averaging is 56.8901% done, 3.09152 s remaining
+subpixel-averaging is 72.3418% done, 1.54937 s remaining
+subpixel-averaging is 85.6864% done, 0.668662 s remaining
+subpixel-averaging is 99.7335% done, 0.0108622 s remaining
+subpixel-averaging is 15.4514% done, 22.1144 s remaining
+subpixel-averaging is 30.5519% done, 9.10101 s remaining
+subpixel-averaging is 44.2477% done, 5.07171 s remaining
+subpixel-averaging is 55.4854% done, 3.22852 s remaining
+subpixel-averaging is 68.83% done, 1.84313 s remaining
+subpixel-averaging is 82.1747% done, 0.874792 s remaining
+subpixel-averaging is 97.2752% done, 0.11361 s remaining
+time for set_epsilon = 103.073 s
+-----------
+MPB solved for frequency_1(0.931628,0,0) = 0.688333 after 14 iters
+MPB solved for frequency_1(0.867906,0,0) = 0.645155 after 9 iters
+MPB solved for frequency_1(0.867916,0,0) = 0.645161 after 2 iters
+Meep progress: 22.266666666666666/405.20000000000005 = 5.5% done in 4.0s, 68.8s to go
+on time step 668 (time=22.2667), 0.00599356 s/step
+Meep progress: 46.766666666666666/405.20000000000005 = 11.5% done in 8.0s, 61.4s to go
+on time step 1404 (time=46.8), 0.00544552 s/step
+Meep progress: 69.83333333333333/405.20000000000005 = 17.2% done in 12.0s, 57.7s to go
+on time step 2096 (time=69.8667), 0.00578869 s/step
+Meep progress: 93.33333333333333/405.20000000000005 = 23.0% done in 16.0s, 53.5s to go
+on time step 2800 (time=93.3333), 0.00568262 s/step
+Meep progress: 118.86666666666666/405.20000000000005 = 29.3% done in 20.0s, 48.2s to go
+on time step 3566 (time=118.867), 0.00522391 s/step
+Meep progress: 144.6/405.20000000000005 = 35.7% done in 24.0s, 43.3s to go
+on time step 4338 (time=144.6), 0.00518754 s/step
+Meep progress: 170.46666666666667/405.20000000000005 = 42.1% done in 28.0s, 38.6s to go
+on time step 5114 (time=170.467), 0.0051564 s/step
+Meep progress: 197.4/405.20000000000005 = 48.7% done in 32.0s, 33.7s to go
+on time step 5922 (time=197.4), 0.00495182 s/step
+Meep progress: 226.16666666666666/405.20000000000005 = 55.8% done in 36.0s, 28.5s to go
+on time step 6785 (time=226.167), 0.00463692 s/step
+Meep progress: 255.16666666666666/405.20000000000005 = 63.0% done in 40.0s, 23.5s to go
+on time step 7655 (time=255.167), 0.00460067 s/step
+Meep progress: 283.3666666666667/405.20000000000005 = 69.9% done in 44.0s, 18.9s to go
+on time step 8502 (time=283.4), 0.00472849 s/step
+Meep progress: 312.5/405.20000000000005 = 77.1% done in 48.0s, 14.2s to go
+on time step 9377 (time=312.567), 0.00457179 s/step
+Meep progress: 339.93333333333334/405.20000000000005 = 83.9% done in 52.0s, 10.0s to go
+on time step 10199 (time=339.967), 0.00487034 s/step
+Meep progress: 371.76666666666665/405.20000000000005 = 91.7% done in 56.0s, 5.0s to go
+on time step 11154 (time=371.8), 0.00418929 s/step
+Meep progress: 403.7/405.20000000000005 = 99.6% done in 60.0s, 0.2s to go
+on time step 12112 (time=403.733), 0.00417838 s/step
+run 0 finished at t = 405.2 (12156 timesteps)
+L1=14 L2=14: s=0.5328 m=0.4696
+
+Elapsed run time = 163.2637 s

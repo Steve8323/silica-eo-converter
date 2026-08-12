@@ -1,0 +1,38 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.00077796 s
+Working in 2D dimensions.
+Computational cell is 44.1333 x 26.2 x 0 with resolution 15
+subpixel-averaging is 19.7373% done, 16.5086 s remaining
+subpixel-averaging is 39.4751% done, 6.29467 s remaining
+subpixel-averaging is 57.803% done, 2.94621 s remaining
+subpixel-averaging is 77.0708% done, 1.20751 s remaining
+subpixel-averaging is 96.8086% done, 0.132226 s remaining
+subpixel-averaging is 20.2072% done, 15.9614 s remaining
+subpixel-averaging is 39.4751% done, 6.30901 s remaining
+subpixel-averaging is 57.803% done, 2.95755 s remaining
+subpixel-averaging is 76.6009% done, 1.23706 s remaining
+subpixel-averaging is 93.9889% done, 0.257205 s remaining
+subpixel-averaging is 19.7373% done, 16.5782 s remaining
+subpixel-averaging is 38.0652% done, 6.53479 s remaining
+subpixel-averaging is 57.3331% done, 2.97951 s remaining
+subpixel-averaging is 77.0708% done, 1.20076 s remaining
+subpixel-averaging is 97.7485% done, 0.0928899 s remaining
+time for set_epsilon = 77.9284 s
+-----------
+MPB solved for frequency_1(0.931628,0,0) = 0.688333 after 14 iters
+MPB solved for frequency_1(0.867906,0,0) = 0.645155 after 9 iters
+MPB solved for frequency_1(0.867916,0,0) = 0.645161 after 2 iters
+Meep progress: 94.86666666666666/359.495 = 26.4% done in 4.0s, 11.2s to go
+on time step 2846 (time=94.8667), 0.00140842 s/step
+Meep progress: 175.36666666666667/359.495 = 48.8% done in 8.0s, 8.4s to go
+on time step 5261 (time=175.367), 0.00165652 s/step
+Meep progress: 237.9/359.495 = 66.2% done in 12.0s, 6.1s to go
+on time step 7138 (time=237.933), 0.00213163 s/step
+Meep progress: 302.8/359.495 = 84.2% done in 16.0s, 3.0s to go
+on time step 9084 (time=302.8), 0.00205653 s/step
+run 0 finished at t = 359.5 (10785 timesteps)
+L1=0.15 L2=14: s=0.1774 m=0.9507
+
+Elapsed run time = 97.4863 s

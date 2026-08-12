@@ -1,0 +1,25 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.000257015 s
+Working in 2D dimensions.
+Computational cell is 39.1333 x 21.2 x 0 with resolution 15
+subpixel-averaging is 34.1663% done, 7.71257 s remaining
+subpixel-averaging is 71.75% done, 1.5807 s remaining
+subpixel-averaging is 40.3164% done, 5.93068 s remaining
+subpixel-averaging is 78.5834% done, 1.10175 s remaining
+subpixel-averaging is 36.2163% done, 7.07599 s remaining
+subpixel-averaging is 73.8001% done, 1.42317 s remaining
+time for set_epsilon = 42.2677 s
+-----------
+MPB solved for frequency_1(0.931628,0,0) = 0.688333 after 14 iters
+MPB solved for frequency_1(0.867906,0,0) = 0.645155 after 9 iters
+MPB solved for frequency_1(0.867916,0,0) = 0.645161 after 2 iters
+Meep progress: 145.23333333333332/342.995 = 42.3% done in 4.0s, 5.4s to go
+on time step 4357 (time=145.233), 0.000918477 s/step
+Meep progress: 271.96666666666664/342.995 = 79.3% done in 8.0s, 2.1s to go
+on time step 8159 (time=271.967), 0.00105214 s/step
+run 0 finished at t = 343.0 (10290 timesteps)
+L1=0.15 L2=11.31: s=0.1506 m=0.7241
+
+Elapsed run time = 53.0432 s

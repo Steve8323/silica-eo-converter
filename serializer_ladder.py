@@ -26,26 +26,44 @@ W = 0.991
 NSIL = 1.444024
 GAP = 0.12
 LPI = 11.31           # full-transfer length at gap 0.12 (supermode)
-RHO = 3.5             # U-bend radius (um)
+RHO = 6.0             # U-bend radius: 3.5 radiated ~10%/half-turn (ring Q data); 6.0 -> ~1%
 FCEN = 1 / 1.55
 FW = 0.15 * FCEN
 
-K_BEND = 0.30   # rad of extra coupling contributed by the adjacent arcs
-                # (measured: uncorrected run overshoots, cf. MZI +0.375 rad)
+GAP_M = 0.40    # merge-side gap: lowers the arc-coupling floor below 1/N
 
-def clen(ratio):
-    """straight coupler length for cross fraction 'ratio', correcting for
-    the arc contribution (supermode rate pi/2/LPI rad/um)."""
+# FDTD-calibrated tap curve at gap 0.12 with rho=6 (calib_cell sweeps):
+CAL_L = [0.15, 2.5, 5.0, 8.0]
+CAL_K = [0.434, 0.713, 0.949, 1.253]      # kappa(L1) [rad], monotone
+
+def L_tap(ratio):
     k = np.arcsin(np.sqrt(min(ratio, 1.0)))
-    return max((k - K_BEND) / (np.pi / 2 / LPI), 0.15)
+    if k <= CAL_K[0]:
+        return 0.15
+    if k > CAL_K[-1]:                       # linear extrapolation at top
+        return CAL_L[-1] + (k - CAL_K[-1]) / 0.101
+    return float(np.interp(k, CAL_K, CAL_L))
 
-PITCH = [16, 18, 21, 25, 30, 36, 43, 51][: N]      # uneven, front-loaded
+def L_mrg(ratio):
+    # extrapolated merge curve at gap 0.40: kappa = 0.45 + 0.075*L
+    k = np.arcsin(np.sqrt(min(ratio, 1.0)))
+    return max((k - 0.45) / 0.075, 0.15)
+
+PITCH = [16, 18, 20, 24, 26, 28, 30, 32][: N]      # uneven, front-loaded
 # split: s_k = 1/(N-k) leaves 1/N per arm; merge MIRRORS it (full transfer
 # at the LAST tap, which no other slot passes): T_k = 1/N^2 uniform.
 s_ratio = [1.0 / (N - k) for k in range(N)]
 m_ratio = [1.0 / (N - k) for k in range(N)]
-L1 = [clen(r) for r in s_ratio]
-L2 = [min(clen(r), LPI) for r in m_ratio]
+L1 = [L_tap(r) for r in s_ratio]
+L2 = [L_mrg(r) for r in m_ratio]
+if N == 6:
+    # trim iteration 1: flatten measured slot ripple
+    # (slots were 0.48,0.71,0.72,1.00,0.32,0.22 -> cut hot mid taps/merges,
+    #  feed the starved late slots via the (1-s) chain)
+    # trim iteration 2 (iter-1 slots: 1.00,0.34,0.36,0.30,0.39,0.21 —
+    #  m_1 boost overshot 3x: merge curve steeper than extrapolated near floor)
+    L1 = [0.15, 0.15, 0.50, 0.65, 3.60, 10.5]
+    L2 = [0.15, 0.15, 0.15, 0.15, 3.50, 16.0]
 
 xs = np.concatenate([[10.0], 10.0 + np.cumsum(PITCH[:-1])]) if N > 1 else np.array([10.0])
 SPAN = xs[-1] + L1[-1] + 2 * RHO + 8
@@ -54,7 +72,7 @@ sx = SPAN + 14
 yA = 6.0
 y_arm = yA - (W + GAP)          # tap-arm level (below bus A)
 y_mrg = y_arm - 2 * RHO         # merge-arm level
-yB = y_mrg - (W + GAP)          # bus B
+yB = y_mrg - (W + GAP_M)        # bus B
 sy = (yA + 5) - (yB - 7)
 y0 = (yA + 5 + yB - 7) / 2      # cell center offset
 
@@ -69,10 +87,10 @@ for k in range(N):
     arcs.append((xu, y_arm - RHO, RHO, -90, 90))            # right semicircle
     xm = xu
     segs.append(((xm - L2[k], y_mrg), (xm, y_mrg)))         # merge section
-    xd = xm - L2[k] - 2.0                                   # down-bend corner
+    xd = xm - L2[k] - 3.0                                   # down-bend corner
     segs.append(((xd, y_mrg), (xm - L2[k], y_mrg)))         # short lead
-    arcs.append((xd, y_mrg - 2.0, 2.0, 90, 180))            # quarter bend down
-    segs.append(((xd - 2.0, y_mrg - 2.0), (xd - 2.0, yB - 8)))  # dump stub
+    arcs.append((xd, y_mrg - 4.0, 4.0, 90, 180))            # quarter bend down
+    segs.append(((xd - 4.0, y_mrg - 4.0), (xd - 4.0, yB - 8)))  # dump stub
 
 def dist_seg(p, a, b):
     ax, ay = a; bx, by = b
