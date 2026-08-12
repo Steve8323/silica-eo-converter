@@ -1,0 +1,78 @@
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+-----------
+Initializing structure...
+time for choose_chunkdivision = 0.000847101 s
+Working in 2D dimensions.
+Computational cell is 104.68 x 15 x 0 with resolution 25
+subpixel-averaging is 55.1171% done, 3.27859 s remaining
+subpixel-averaging is 55.1171% done, 3.2798 s remaining
+subpixel-averaging is 7.53039% done, 49.37 s remaining
+subpixel-averaging is 15.0609% done, 22.7385 s remaining
+subpixel-averaging is 21.9309% done, 14.3129 s remaining
+subpixel-averaging is 29.065% done, 9.89476 s remaining
+subpixel-averaging is 36.7277% done, 6.90321 s remaining
+subpixel-averaging is 44.7866% done, 4.96492 s remaining
+subpixel-averaging is 52.5814% done, 3.62491 s remaining
+subpixel-averaging is 60.244% done, 2.65859 s remaining
+subpixel-averaging is 67.9066% done, 1.89978 s remaining
+subpixel-averaging is 75.9656% done, 1.28011 s remaining
+subpixel-averaging is 83.364% done, 0.800731 s remaining
+subpixel-averaging is 90.6303% done, 0.414967 s remaining
+subpixel-averaging is 98.293% done, 0.069967 s remaining
+subpixel-averaging is 55.1171% done, 3.2622 s remaining
+subpixel-averaging is 58.0699% done, 2.88867 s remaining
+subpixel-averaging is 7.39827% done, 50.1673 s remaining
+subpixel-averaging is 15.3251% done, 22.1351 s remaining
+subpixel-averaging is 22.8557% done, 13.7101 s remaining
+subpixel-averaging is 29.9898% done, 9.36651 s remaining
+subpixel-averaging is 37.5203% done, 6.81229 s remaining
+subpixel-averaging is 45.3151% done, 4.8909 s remaining
+subpixel-averaging is 53.242% done, 3.51672 s remaining
+subpixel-averaging is 60.6404% done, 2.60181 s remaining
+subpixel-averaging is 68.4351% done, 1.85862 s remaining
+subpixel-averaging is 76.0977% done, 1.27201 s remaining
+subpixel-averaging is 83.8925% done, 0.771992 s remaining
+subpixel-averaging is 91.8193% done, 0.357626 s remaining
+subpixel-averaging is 59.0541% done, 2.7803 s remaining
+subpixel-averaging is 58.0699% done, 2.91703 s remaining
+subpixel-averaging is 7.53039% done, 49.5712 s remaining
+subpixel-averaging is 15.5894% done, 21.6975 s remaining
+subpixel-averaging is 23.3841% done, 13.3852 s remaining
+subpixel-averaging is 31.0467% done, 8.97508 s remaining
+subpixel-averaging is 38.7094% done, 6.34729 s remaining
+subpixel-averaging is 46.6362% done, 4.5886 s remaining
+subpixel-averaging is 54.431% done, 3.4092 s remaining
+subpixel-averaging is 62.6221% done, 2.40457 s remaining
+subpixel-averaging is 70.2847% done, 1.70434 s remaining
+subpixel-averaging is 77.8152% done, 1.14153 s remaining
+subpixel-averaging is 85.4779% done, 0.689244 s remaining
+subpixel-averaging is 93.4047% done, 0.284293 s remaining
+time for set_epsilon = 207.625 s
+-----------
+Warning: grid volume is not an integer number of pixels; cell size will be rounded to nearest pixel.
+MPB solved for frequency_1(0.931628,0,0) = 0.687594 after 15 iters
+MPB solved for frequency_1(0.868968,0,0) = 0.64516 after 8 iters
+MPB solved for frequency_1(0.86897,0,0) = 0.645161 after 1 iters
+on time step 180 (time=3.6), 0.0222516 s/step
+on time step 346 (time=6.92), 0.0242059 s/step
+on time step 504 (time=10.08), 0.0254674 s/step
+on time step 682 (time=13.64), 0.0226498 s/step
+on time step 854 (time=17.08), 0.0233378 s/step
+on time step 1022 (time=20.44), 0.0240322 s/step
+on time step 1192 (time=23.84), 0.0235982 s/step
+on time step 1361 (time=27.22), 0.0237582 s/step
+on time step 1538 (time=30.76), 0.022615 s/step
+on time step 1708 (time=34.16), 0.0235461 s/step
+on time step 1884 (time=37.68), 0.0227358 s/step
+on time step 2061 (time=41.22), 0.0227658 s/step
+on time step 2239 (time=44.78), 0.0225123 s/step
+on time step 2410 (time=48.2), 0.0235338 s/step
+on time step 2576 (time=51.52), 0.0241181 s/step
+on time step 2734 (time=54.68), 0.0254003 s/step
+on time step 2904 (time=58.08), 0.0236385 s/step
+/Users/steven/.claude/worktrees/silica-eo-converter/silica_eo_converter/mzi.py:106: RuntimeWarning: invalid value encountered in divide
+  s = (Pb - Pc) / (Pb + Pc)
+run 0 finished at t = 60.02 (3001 timesteps)
+DN=0 LC=5.35: s(1550)=+nan bar=0 cross=0 sum/in=0.000
+
+Elapsed run time = 278.1353 s
