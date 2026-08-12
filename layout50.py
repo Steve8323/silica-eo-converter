@@ -36,7 +36,7 @@ y_mrg = y_arm - 2 * RHO
 yB = y_mrg - 1.4
 x_end = X_LADDER + xs[-1] + L1[-1] + 2 * RHO + 10
 
-GOLD = "#c46b3a"  # copper
+GOLD = "#b9bec7"  # silver
 fig, ax = plt.subplots(figsize=(14, 5.4), dpi=150)
 
 # ---- optical ports ----
@@ -68,7 +68,7 @@ ax.text(X_MRR + MRR_R + 22, cy + 13, "RF pad (GHz drive)", ha="left", fontsize=6
 ax.text(X_MRR - MRR_R - 20, cy - 32, "DC bias pad\n(E_b linearizes Kerr)", ha="right", fontsize=6.5)
 ax.text(X_MRR + 150, cy + MRR_R + 14,
         "MASTER MRR R=16 um (Q_bend=1.1e7, FSR 2 THz)\n"
-        "FAST EO ELECTRODES: inner+outer Cu rings flanking the guide\n"
+        "FAST EO ELECTRODES: inner+outer Ag rings flanking the guide\n"
         "DC-Kerr tuning, ~0.1-1 GHz photon-lifetime bandwidth",
         ha="center", fontsize=7, weight="bold")
 
@@ -89,7 +89,7 @@ for k in range(N):
                            color=GOLD, alpha=0.45, lw=0))
 kk = 24
 xk = X_LADDER + xs[kk] + L1[kk] + RHO
-ax.annotate("Cu WEIGHT ELECTRODE PAIR on every arm\n(signal + ground; slow DC-Kerr "
+ax.annotate("Ag WEIGHT ELECTRODE PAIR on every arm\n(signal + ground; slow DC-Kerr "
             "phase/amplitude trim of slot k)",
             xy=(xk, y_mrg + RHO), xytext=(xk - 120, y_mrg - 26),
             fontsize=7, weight="bold", color="#8a6d00",

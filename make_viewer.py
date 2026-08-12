@@ -29,10 +29,10 @@ layers = [
     dict(key="wg",  name="SiO2 waveguide core (thermal oxide, n=1.444, t=1.0 um)",
          color="#4da3ff", mode="stroke", op=1.0, features=lay["WG"],
          desc="the only optical material; mask SEO-WG-01, e-beam/DUV, full etch"),
-    dict(key="met", name="Cu electrodes (Ti/TiN/Cu 200 nm/TiN, liftoff)",
-         color="#c46b3a", mode="stroke", op=0.95, features=lay["MET"],
-         desc="MRR fast EO pair + RF/DC pads; 50 weight pairs + rails; TiN barriers "
-              "stop Cu drift into SiO2 under DC bias; mask SEO-MET-02"),
+    dict(key="met", name="Ag electrodes (Ti 5 nm / Ag 200 nm, liftoff)",
+         color="#b9bec7", mode="stroke", op=0.95, features=lay["MET"],
+         desc="single-evaporation liftoff — simplest metallization; MRR fast EO pair "
+              "+ RF/DC pads; 50 weight pairs + rails; mask SEO-MET-02"),
     dict(key="rel", name="Release windows (mask SEO-REL-03)",
          color="#e377c2", mode="fill", op=0.85, features=lay["REL"],
          desc="openings in resist for the XeF2 isotropic Si etch; 24 um pitch"),
@@ -77,13 +77,13 @@ border-radius:4px;font-family:ui-monospace,monospace;font-size:13px;color:#ff6;z
 <rect x="30" y="52" width="200" height="26" fill="#101014"/>
 <rect x="112" y="52" width="36" height="14" fill="#4da3ff"/>
 <rect x="60" y="30" width="34" height="14" fill="#3a3f46"/>
-<rect x="60" y="16" width="34" height="14" fill="#c46b3a"/>
+<rect x="60" y="16" width="34" height="14" fill="#b9bec7"/>
 <rect x="170" y="30" width="34" height="14" fill="#3a3f46"/>
-<rect x="170" y="16" width="34" height="14" fill="#c46b3a"/>
+<rect x="170" y="16" width="34" height="14" fill="#b9bec7"/>
 <text x="130" y="46" fill="#4da3ff" font-size="8" text-anchor="middle">SiO2 core 0.991 x 1.0 um</text>
 <text x="130" y="74" fill="#1c9da8" font-size="8" text-anchor="middle">air (XeF2 cavity)</text>
-<text x="77" y="12" fill="#c46b3a" font-size="8" text-anchor="middle">Cu electrode</text>
-<text x="187" y="12" fill="#c46b3a" font-size="8" text-anchor="middle">Cu electrode</text>
+<text x="77" y="12" fill="#b9bec7" font-size="8" text-anchor="middle">Ag electrode</text>
+<text x="187" y="12" fill="#b9bec7" font-size="8" text-anchor="middle">Ag electrode</text>
 <text x="24" y="112" fill="#889" font-size="8">Si substrate</text>
 <text x="77" y="40" fill="#889" font-size="7" text-anchor="middle">Si mesa</text>
 </svg>

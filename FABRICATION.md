@@ -11,7 +11,7 @@ lithography for mask 1; masks 2–3 are ≥1 µm and can be stepper/contact.
 | # | Name | Field | Purpose | Min feature |
 |---|---|---|---|---|
 | 1 | SEO-WG-01 | dark | waveguide etch | 0.12 µm gap |
-| 2 | SEO-MET-02 | clear | Cu electrode liftoff | 1.0 µm spacing |
+| 2 | SEO-MET-02 | clear | Ag electrode liftoff | 1.0 µm spacing |
 | 3 | SEO-REL-03 | dark | XeF₂ release windows | 6 µm |
 
 All three carry corner cross alignment marks; overlay budget 0.25 µm
@@ -30,13 +30,11 @@ entirely within mask 1, so overlay does NOT touch the critical dimensions).
    CHF₃/Ar), vertical sidewalls. Strip resist.
 4. **Sidewall smoothing anneal**: 1000 °C N₂, 2 h (reflow-smooths etch
    roughness — silica's low index makes it tolerant, but ring Q benefits).
-5. **Mask 2 — electrodes (SEO-MET-02)**: image-reversal resist, liftoff of
-   **Ti 5 nm / TiN 20 nm / Cu 200 nm / TiN 20 nm**: MRR inner+outer ring
+5. **Mask 2 — electrodes (SEO-MET-02)**: image-reversal resist, single
+   e-beam evaporation of **Ti 5 nm / Ag 200 nm**, liftoff. Simplest possible
+   metallization: one pump-down, no barrier stack. MRR inner+outer ring
    electrodes (3 µm wide, 1 µm from the guide edge), RF + DC pads, 50
-   weight-electrode pairs, signal/ground rails and fan-out. The TiN layers are
-   NOT optional with copper: the bottom barrier stops Cu drifting into the
-   oxide under the 50–100 V/µm DC bias (Cu⁺ is mobile in SiO₂ — the classic
-   reliability killer), and the top cap stops air oxidation. Metal never
+   weight-electrode pairs, signal/ground rails and fan-out. Metal never
    crosses a suspended span (rails run on unreleased mesa).
 6. **Mask 3 — release (SEO-REL-03)**: pattern release windows (resist as
    mask), then **XeF₂ isotropic Si etch** undercuts ~8 µm per side: buses,
@@ -73,9 +71,11 @@ entirely within mask 1, so overlay does NOT touch the critical dimensions).
 - Released membrane stress: thermal oxide is compressive (~300 MPa) —
   the 24 µm window pitch keeps spans short; buckling shows up as slot-time
   jitter first (measure slot times vs design as the stress metric).
-- Cu near the mode: 1 µm edge spacing costs <0.01 dB/cm at 1550 (evanescent
-  tail ~200 nm; Cu and Au are comparably lossy at 1550) — do not shrink below
-  0.8 µm.
-- Cu-specific: barrier integrity is the reliability item. Test structure on
-  each die: interdigitated Cu fingers at bias, monitor leakage vs time (BTS
-  test, 150 °C/1 MV/cm); any drift → thicken bottom TiN to 40 nm.
+- Ag near the mode: 1 µm edge spacing costs <0.01 dB/cm at 1550 (evanescent
+  tail ~200 nm; Ag is the least absorbing metal at 1550) — do not shrink
+  below 0.8 µm.
+- Ag tarnish (sulfidation) dulls pads over months in air — cosmetic at DC/GHz;
+  if it bothers probing, a 20 nm Au flash on the pads only fixes it.
+- Ag is field-mobile in oxide like Cu, just milder. At sustained 50–100 V/µm
+  bias, watch leakage on the first dies; if it drifts, the fix is the same
+  cheap one: swap the evaporation to Ti/Au — no mask or design change.
